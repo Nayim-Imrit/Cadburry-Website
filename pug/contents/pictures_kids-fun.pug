@@ -1,0 +1,49 @@
+.container-fluid.color-02
+  .row
+    .col-md-2
+    .col-md-8
+      .container
+        .row
+          .col-md-12
+            .d-flex.justify-content-center.text-center
+              h1.text-light FIND YOUR NEAREST
+            .d-flex.justify-content-center.text-center
+              h2.text-light CADBURRY EASTER EGG HUNT
+            .d-flex.justify-content-center.text-center
+              p.text-light
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              |                             &gt;
+            .d-flex.justify-content-center
+              .col-md-6.mb-3
+                label(for='validationServer02')
+                input#validationServer02.form-control.is-invalid.form-rounded(onkeyup='stoppedTyping()' placeholder=' ENTER YOUR POSTCODE' style='text-align: center;' type='text')
+                #c-error-message.d-flex.justify-content-center.invalid-feedback.text-warning
+                .d-flex.justify-content-center
+                  button#create_error.c--btn.c--btn-color-01(disabled='disabled' onclick='content_search()') Search
+                .d-flex.justify-content-center
+                  p
+                    a.underline(href='#')
+                      ins LOOKING FOR AN EGG HUNT IN IRELAND?
+            .row
+              // Photo Grid
+              .c_wrapper
+                .c_row
+                  .c_column
+                    a(data-lightbox='mygallery' data-title='Kids Playing' href='../assets/photos/grid_image_1.png')
+                      img(src='../assets/photos/grid_image_1.png')
+                  .c_column
+                    .c_inline_images
+                      a(data-lightbox='mygallery' data-title='Kids hiding' href='../assets/photos/grid_image_2.png')
+                        img(src='../assets/photos/grid_image_2.png')
+                      a(data-lightbox='mygallery' data-title='Kids chatting' href='../assets/photos/grid_image_3.png')
+                        img(src='../assets/photos/grid_image_3.png')
+                    a(data-lightbox='mygallery' data-title='Kids face painting' href='../assets/photos/grid_image_4.png')
+                      img(src='../assets/photos/grid_image_4.png')
+                  .c_column
+                    a(data-lightbox='mygallery' data-title='Parents-kids gathering' href='../assets/photos/grid_image_5.png')
+                      img(src='../assets/photos/grid_image_5.png')
+                    .c_inline_images
+                      a(data-lightbox='mygallery' data-title='Kids reading' href='../assets/photos/grid_image_6.png')
+                        img(src='../assets/photos/grid_image_6.png')
+                      a(data-lightbox='mygallery' data-title='Kids drawing' href='../assets/photos/grid_image_7.png')
+                        img(src='../assets/photos/grid_image_7.png')

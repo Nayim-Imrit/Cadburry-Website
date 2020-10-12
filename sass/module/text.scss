@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'StRydeBold';
+  src:local("fonts/StRyde-Bold-otf.otf");  
+}
+
+@font-face {
+  font-family: 'StRydeRegular';
+  src:local('C:\Users\aimrit\Desktop\Eastertest\fonts\StRydeRegular-otf.otf');  
+}
+
+
+$pink-text: #b9a3d0;
+
+a,
+u {
+  text-decoration: none;
+  color: white;
+}
+  
+.orange {
+  color: orange;
+}
+
+.color-01 {
+  background-color: #482683;
+}
+
+.color-02 {
+  background-color: #6744a5;
+}
+
+.underline:hover {
+  color: white;
+}
+
+.c-footer {
+  display: flex;
+  background-color: #fff;
+}
+
+.c-footer__links {
+
+  a {
+    color: $pink-text;
+    font-family: "StRydeBold";
+  }  
+}
+.c-footer__social-media{
+  float: right;
+}

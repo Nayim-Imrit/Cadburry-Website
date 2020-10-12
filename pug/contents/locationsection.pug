@@ -1,0 +1,78 @@
+mixin location-pictures(image, text, link)
+  .egg-hunt_map--location
+    .egg-hunt_image
+      img(src= image)
+    .egg-hunt_image--text
+      p.text-light&attributes(attributes)=text
+      h6
+        a.orange(href=link)
+          ins Read More
+
+mixin location-pictures-hidden(image, text, link)
+  .egg-hunt_map--location.hidden_contents
+    .egg-hunt_image
+      img(src= image)
+    .egg-hunt_image--text
+      p.text-light&attributes(attributes)=text
+      h6
+        a.orange(href=link)
+          ins Read More
+
+.container-fluid.color-02
+  .row
+    .col-md-2
+    .col-md-8
+      .container
+        .row
+          .col-md-12
+            .d-flex.justify-content-center.text-center
+              h1.text-light FIND YOUR NEAREST
+            .d-flex.justify-content-center.text-center
+              h2.text-light CADBURRY EASTER EGG HUNT
+            .d-flex.justify-content-center.text-center
+              p.text-light
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              |                             &gt;
+            .d-flex.justify-content-center
+              .col-md-6.mb-3
+                label(for='validationServer02')
+                input#validationServer02.form-control.is-invalid.form-rounded(onkeyup='stoppedTyping()' placeholder=' BR15AW' style='text-align: center;' type='text')
+                #c-error-message.d-flex.justify-content-center.invalid-feedback.text-warning
+                .d-flex.justify-content-center
+                  button#create_error.c--btn.c--btn-color-01(disabled='disabled' onclick='content_search()') Search
+                .d-flex.justify-content-center
+                  p
+                    a.underline(href='#')
+                      ins LOOKING FOR AN EGG HUNT IN IRELAND?
+            .row
+              .c_wrapper
+                .c_row
+                  .egg-hunt_map--location
+                    #map
+                    script.
+                      function myMap() {
+                      var mapOptions = {
+                      center: new google.maps.LatLng(51.5, -0.12),
+                      zoom: 10,
+                      mapTypeId: google.maps.MapTypeId.HYBRID
+                      }
+                      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                      }
+                    script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXc3SQjni9mx_-x3MYqcjuDeT-79Q5uM&callback=myMap')
+                  +location-pictures("../assets/photos/Red%20House%20Photo_1.png",'Hindhead Commons and the Devil&apos;s Punch Bowl 5.4 miles',"http://facebook.com")
+                  +location-pictures("../assets/photos/Manor%20House%20Photo_2.png",'Lacock Abbey, village and Fox Talbot Museum 8.5 miles',"http://facebook.com")
+                  +location-pictures("../assets/photos/Morden%20Hall%20Photo_3.png",'Sudbury Hall and the National Trust Museum of Childhood 9 miles',"http://facebook.com")
+                  
+                  .egg-hunt_map--location
+                  +location-pictures-hidden("../assets/photos/Red%20House%20Photo_1.png",'Hindhead Commons and the Devil&apos;s Punch Bowl 5.4 miles',"http://facebook.com")
+                  +location-pictures-hidden("../assets/photos/Manor%20House%20Photo_2.png",'Lacock Abbey, village and Fox Talbot Museum 8.5 miles',"http://facebook.com")
+                  +location-pictures-hidden("../assets/photos/Morden%20Hall%20Photo_3.png",'Sudbury Hall and the National Trust Museum of Childhood 9 miles',"http://facebook.com")
+ 
+                  .egg-hunt_map--location
+                  +location-pictures-hidden("../assets/photos/Red%20House%20Photo_1.png",'Hindhead Commons and the Devil&apos;s Punch Bowl 5.4 miles',"http://facebook.com")
+                  +location-pictures-hidden("../assets/photos/Manor%20House%20Photo_2.png",'Lacock Abbey, village and Fox Talbot Museum 8.5 miles',"http://facebook.com")
+                  +location-pictures-hidden("../assets/photos/Morden%20Hall%20Photo_3.png",'Sudbury Hall and the National Trust Museum of Childhood 9 miles',"http://facebook.com")
+
+              .egg-hunt_map--location
+              .col-md-auto
+                button#btnShow.c--btn.c--btn-color-01.btn-block.text-uppercase load more location

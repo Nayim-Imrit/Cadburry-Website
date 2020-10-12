@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'StRydeBold';
+  src: url("../fonts/StRyde-Bold-otf.otf"); }
+
+@font-face {
+  font-family: 'StRydeRegular';
+  src: url("../fonts/StRyde-Regular.otf"); }
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: 'StRydeBold'; }
+
+.navbar-nav .nav-link {
+  font-family: 'StRydeRegular';
+  padding: 1px; }
+
+p {
+  font-family: 'StRydeRegular'; }
+
+a,
+u {
+  text-decoration: none;
+  color: white; }
+
+.orange {
+  color: orange; }
+
+.color-01 {
+  background-color: #482683; }
+
+.color-02 {
+  background-color: #6744a5; }
+
+.underline:hover {
+  color: white; }
+
+.pink-text {
+  color: #b9a3d0; }

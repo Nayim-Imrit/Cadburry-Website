@@ -1,0 +1,175 @@
+.box {
+  border-radius: 5px;
+  padding: 5px;
+}
+.box img {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+}
+/* Repeat 2 rows named "row", each between 120px and 1fr tall */
+/* Repeat 5 columns named "col", each 1fr wide */
+.grid-container {
+  display: grid;
+  grid-template: repeat(2,[row] minmax(120px,1fr))/repeat(5,[col] 1fr);
+  grid-gap: 5px;
+}
+.item-1 {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.item-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.item-4 {
+  grid-column: col 2 / span 2;
+  grid-row: row 2;
+}
+.item-5 {
+  grid-column: col 4 / span 2;
+  grid-row: row 1;
+}
+.item-6 {
+  grid-column: col 4;
+  grid-row: row 2;
+}
+.item-7 {
+  grid-column: col 5;
+  grid-row: row 2;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.c_row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.c_inline_images img {
+  display: flex;
+  height: auto;
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+  float: left;
+}
+.c_wrapper {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+/* Create four equal columns that sits next to each other */
+.c_column {
+  -ms-flex: 33.3%;
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+.c_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width:800px) {
+  .c_column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .c_column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+.gap-right {
+  margin-right: 10px;
+}
+.image {
+  height: auto;
+  width: 100%;
+}
+.form-rounded {
+  border-radius: 1rem;
+}
+.div-bottom-image {
+  background-size: contain,cover;
+  background-size: cover;
+  background-position: center 0;
+  overflow: hidden;
+}
+/* Responsive layout-download section */
+@media screen and (max-width:800px) {
+  .center_downloadinfo {
+      text-align: center;
+      max-width: 100%;
+      margin: auto;
+  }
+}
+/* Responsive layout-download section */
+@media screen and (max-width:600px) {
+  .center_downloadinfo {
+      text-align: center;
+      max-width: 100%;
+      margin: auto;
+  }
+}
+// A map of breakpoints.$breakpoints: (xs:576px,sm:768px,md:992px,lg:1200px);
+@mixin c-btn ($color) {
+  background: $color;
+  &:hover {
+      background: white;
+      color: #ff9800;
+      transition: all 0.3s ease;
+      box-shadow: 0 0.5em 0.5em -0.4em var;
+      transform: translateY(-0.20em);
+  }
+  &:active {
+      background: darken($color,20%);
+  }
+  &:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.20em);
+    outline: 0;
+  }
+}
+.c--btn {
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 33px;
+  color: #ff9800;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.c--btn-color-01 {
+  @include c-btn(#6744a5);
+}
+.c--btn-color-02 {
+  @include c-btn(#482683);
+}
+.c--btn-color-03 {
+  @include c-btn(#4B0082);
+}
+$colors: (main:#482683, secondary:#6744a5);
+// A map of breakpoints.
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+

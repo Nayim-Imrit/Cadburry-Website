@@ -1,0 +1,45 @@
+.container-fluid
+  .row
+    .col-md-2
+    .col-md-8
+      .container.color-02
+        .row
+          .col-md-12
+            .d-flex.justify-content-center.text-center
+              h1.text-light FIND YOUR NEAREST
+            .d-flex.justify-content-center.text-center
+              h2.text-light CADBURRY EASTER EGG HUNT
+            .d-flex.justify-content-center.text-center
+              p.text-light
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              |                             &gt;
+            .d-flex.justify-content-center
+              .col-md-6.mb-3
+                label(for='validationServer02')
+                input#validationServer02.form-control.is-invalid.form-rounded(placeholder=' |ENTER YOUR POSTCODE' required='' style='text-align: center;' type='text' value='')
+                .d-flex.justify-content-center.invalid-feedback.text-warning
+                  | Whoops! Looks like that post code isn&apos;t valid.
+                .d-flex.justify-content-center
+                  button.c--btn.c--btn-color-01 Search
+                .d-flex.justify-content-center
+                  p
+                    a.underline(href='')
+                      ins LOOKING FOR AN EGG HUNT IN IRELAND?
+            .row
+              // Photo Grid
+              .c_wrapper
+                .c_row
+                  .c_column
+                    img(src='../assets/photos/grid_image_1.png')
+                  .c_column
+                    .c_inline_images
+                      img(src='../assets/photos/grid_image_2.png')
+                      img(src='../assets/photos/grid_image_3.png')
+                    img(src='../assets/photos/grid_image_4.png')
+                  .c_column
+                    img(src='../assets/photos/grid_image_5.png')
+                    .c_inline_images
+                      img.img-responsive.inline-block(src='../assets/photos/grid_image_6.png')
+                      img.img-responsive.inline-block(src='../assets/photos/grid_image_7.png')
+          .div-bottom-image
+            img.img-fluid(alt='bottom-image' src='../assets/photos/bottom_repeat_up.jpg')

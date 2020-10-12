@@ -1,0 +1,148 @@
+input.search-query {
+	border-radius: 33px;
+}
+
+.search-query {
+	border-radius: 33px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+.navbar-brand img {
+	width: 40px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+.wrapper_banner {
+	background: url("../assets/photos/banner_home.jpg") no-repeat top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 900px;
+	width: auto;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+.navbar-brand img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+.top_nav {
+	background: url("../assets/photos/top_menu.png") no-repeat top right;
+}
+
+.space_top {
+	line-height: 50px;
+}
+
+@media (max-width: 960px) {
+	#top_nav {
+		background: none !important;
+	}
+}
+
+
+/* -----------------------------mob_search---------------------------------- */
+
+#search {
+	position: fixed;
+	width: 100vw;
+	height: 0;
+	background: rgba(0, 0, 0, .90);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: all .5s;
+	will-change: transform, opacity;
+}
+
+#search:target {
+	height: 100vw !important;
+	width: 100vw !important;
+	opacity: 1;
+	z-index: 2;
+}
+
+#searchbox {
+	height: 2rem;
+	max-width: 50%;
+	background: transparent;
+	border-width: 0 0 1px 0;
+	border-style: solid #fff;
+	color: #fff;
+	flex: 1 0 auto;
+	font-size: 2rem;
+	outline: 0;
+	padding: 32px 16px; //2rem 1rem
+}
+
+#close-btn {}
+
+#search.fade {
+	height: 100vw;
+	width: 100vw;
+	transition: opacity .5s;
+	overflow: hidden;
+}
+
+.fa:hover {
+	color: indigo;
+}
+
+.nav_logo {
+	-webkit-transition: -webkit-transtion .5s ease-in-out;
+	transition: transform .5s ease-in-out;
+}
+
+.nav_logo:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+input[type="search"] {
+	-webkit-transition: all 0.4s ease 0s; //safari chrome support
+	-moz-transition: all 0.4s ease 0s; //mozilla support
+	-o-transition: all 0.4s ease 0s; //opera support
+	transition: all 0.4s ease 0s; //expected transition
+	padding: 8px 8px 8px 30px;
+	margin: 1px 2px;
+}
+
+input[type="search"]:focus {
+	margin-left: 2px;
+	padding-left: 5px;
+}
+
+input[type="text"] {
+	-webkit-transition: all 0.7s ease 0s; //safari chrome support
+	-moz-transition: all 0.7s ease 0s; //mozilla support
+	-o-transition: all 0.7s ease 0s; //opera support
+	transition: all 0.7s ease 0s; //expected transition
+	padding: 8px 8px 8px 38px;
+	margin: 1px 9px;
+}
+
+input[type="text"]:focus {
+	margin-left: 10px;
+	padding-left: 5px;
+}
+
+.fa {
+    -webkit-transition: 0.6s ease-out;
+    -moz-transition:  0.6s ease-out;
+    transition:  0.6s ease-out;
+}
+
+.fa:hover{
+	transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+}

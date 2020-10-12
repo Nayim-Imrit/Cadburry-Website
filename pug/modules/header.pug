@@ -1,0 +1,70 @@
+mixin top-menu-item(link, name)
+    li.nav-item
+      a.nav-link.text-white(href=link)&attributes(attributes)= name
+  
+mixin main-menu-item(link, name)
+    li.nav-item.col-md-auto
+      a.nav-link.text-white(href=link)&attributes(attributes)=name
+
+mixin social-media(social, link)
+    li.list-inline-item
+      a.btn.btn-social-icon(href=link, class="btn-"+social)
+        i.fa.white-text(class="fa-"+social)
+
+.wrapper_main
+  .container-fluid
+    .row
+      .col-md-2
+      .col-md-8
+        .container.color-01.wrapper_banner
+          .row
+            #top_nav.col-md-12.top_nav
+              nav.navbar.navbar-expand-lg.navbar-light.sticky-top.space_top
+                // overlay !
+                .align-items-center.justify-content-center
+                  #search.row.hidden-md-up
+                    a#close-btn(href='#')
+                      em.fa.fa-times
+                    form#search-form.hidden.visible-xs.visible-sm(action='#' method='get' name='search-form' target='_top')
+                      input#searchbox(placeholder='search' type='search')
+                      button.c--btn.c--btn-color-03 Search
+                  .row.hidden-lg-up
+                    a.c-icon-search(href='#search')
+                      em.fa.fa-search
+                // - /overlay
+                a.navbar-brand(href='#')
+                  img.img-fluid.nav_logo(alt='cadburryLogo' src='../assets/photos/logo.png')
+                // One of the primary actions on mobile is to call a business - This displays a phone button on mobile only
+                .navbar-toggler.d-lg-none
+                  button.navbar-toggler(data-target='#navbar' data-toggle='collapse' type='button')
+                    span.navbar-toggler-icon
+                #navbar.collapse.navbar-collapse.flex-column
+                  ul.navbar-nav.w-100.nav-justified.justify-content-end
+                    +top-menu-item('cadburry.ru', 'Visit Cadburry World')
+                    +top-menu-item('gifts.com','Buy Cadburry Gifts')
+                    +top-menu-item('personalise.ru','Personalise Your Bar')
+                    li
+                      ul.list-inline
+                        // Facebook
+                        +social-media("facebook", "http://www.facebook.com")
+                        // Twitter
+                        +social-media("twitter", "http://www.twitter.com")
+                        // Instagram
+                        +social-media("instagram", "http://www.instagram.com")
+                  ul.navbar-nav.w-100.justify-content-between.py-1
+                    +main-menu-item('story.com','Our Story')
+                    +main-menu-item('products.ru','Our Products')
+                    +main-menu-item('community.com','Our Community')
+                    +main-menu-item('contact.ru','Contact Us')
+                    li
+                      ul.list-inline
+                        li
+                          form.navbar-form.navbar-right.d-none.d-md-block.col-md-auto(action='#/action_page.php' role='search')
+                            .input-group
+                              input#search-input.form-control.py-2.border-right-0.border-rounded.form-rounded(placeholder='Search' type='search' value='')
+                              span.input-group-append
+                                button.btn.btn-outline-light.border-left-0.bg-transparent.form-rounded(type='button')
+                                  span.input-group-append
+                                    i.fa.fa-search
+
+
